@@ -1,22 +1,57 @@
+%centre
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+// https://www.w3schools.com/howto/howto_css_image_text.asp
+
+
 .title
 {
-    color: red;
-    text-align: center;
+     @extend %centre;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 7vw; // https://www.w3schools.com/howto/howto_css_responsive_text.asp
+    font-size: 7vw;
+}
 
-    // https://www.w3.org/TR/css3-mediaqueries/#orientation
-     @media screen and (orientation:portrait)
+
+// https://www.w3.org/TR/css3-mediaqueries/#orientation
+.orient
+{
+    @media screen and (orientation:portrait)
      {
-         margin-top:100%;
+         height = 100%;
      }
 
     @media screen and (orientation:landscape)
     {
-        margin-top:50%;
+        width = 100%;
     }
 }
+
+// .title
+// {
+//     @extend %centre
+//     color: white;
+//     // text-align: center;
+//     text-transform: uppercase;
+//     font-weight: bold;
+//     font-size: 7vw; // https://www.w3schools.com/howto/howto_css_responsive_text.asp
+
+//     // https://www.w3.org/TR/css3-mediaqueries/#orientation
+//     //  @media screen and (orientation:portrait)
+//     //  {
+//     //      margin-top:100%;
+//     //  }
+
+//     // @media screen and (orientation:landscape)
+//     // {
+//     //     margin-top:50%;
+//     // }
+// }
 
 .name, .playlist
 {
@@ -38,3 +73,13 @@ a:hover
     color: white;
     background: grey;
 }
+
+
+// div
+// {
+//     background-image: url("flower1.JPG");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     height: 100%;
+//     background-position: center;
+// }
