@@ -1,0 +1,23 @@
+.title {
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 7vw; }
+  @media screen and (orientation: portrait) {
+    .title {
+      margin-top: 100%; } }
+  @media screen and (orientation: landscape) {
+    .title {
+      margin-top: 50%; } }
+
+.name, .playlist {
+  color: black; }
+  .name #song, .playlist #song {
+    font-weight: bold; }
+
+::selection {
+  color: white;
+  background: grey; }
+
+/*# sourceMappingURL=stylesheet.css.map */
