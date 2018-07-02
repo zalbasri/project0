@@ -13,11 +13,29 @@
 .orient {
   background-repeat: no-repeat;
   background-size: cover; }
+  @media screen and (orientation: portrait) {
+    .orient {
+      background-position: center;
+      height: 100vh; } }
+  @media screen and (orientation: landscape) {
+    .orient {
+      width: 100vw;
+      height: 100vh; } }
 
-.name, .playlist {
-  color: black; }
-  .name #song, .playlist #song {
+#head_text, .playlist {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; }
+  #head_text #song, .playlist #song {
     font-weight: bold; }
+
+#head_text {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  font-size: 4vw; }
+
+a:visited {
+  color: #e8e8e8; }
 
 ::selection {
   color: white;

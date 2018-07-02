@@ -14,7 +14,7 @@
     color: white;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 7vw;
+    font-size: 7vw; // https://www.w3schools.com/howto/howto_css_responsive_text.asp
 }
 
 
@@ -23,50 +23,46 @@
 {
     background-repeat: no-repeat;
     background-size:cover;
-    //  @media screen and (orientation:portrait)
-    //  {
-    //      height:auto;
-    //  }
+     @media screen and (orientation:portrait)
+     {
+         background-position: center;
+         height:100vh;
+     }
 
-    // @media screen and (orientation:landscape)
-    // {
-    //     width:auto;
-    // }
+    @media screen and (orientation:landscape)
+    {
+        width:100vw;
+        height:100vh;
+    }
 }
 
-// .title
-// {
-//     @extend %centre
-//     color: white;
-//     // text-align: center;
-//     text-transform: uppercase;
-//     font-weight: bold;
-//     font-size: 7vw; // https://www.w3schools.com/howto/howto_css_responsive_text.asp
 
-//     // https://www.w3.org/TR/css3-mediaqueries/#orientation
-//     //  @media screen and (orientation:portrait)
-//     //  {
-//     //      margin-top:100%;
-//     //  }
-
-//     // @media screen and (orientation:landscape)
-//     // {
-//     //     margin-top:50%;
-//     // }
-// }
-
-.name, .playlist
+#head_text, .playlist
 {
      color: black;
+     text-shadow:
+     -1px -1px 0 white,
+     1px -1px 0 white,
+     -1px 1px 0 white,
+     1px 1px 0 white; //https://stackoverflow.com/questions/11323813/how-to-outline-text-in-html-css
      #song
      {
          font-weight: bold;
      }
 }
 
-a:hover
-{
 
+#head_text
+{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    font-size: 4vw;
+}
+
+a:visited
+{
+    color: #e8e8e8;
 }
 
 
@@ -75,13 +71,3 @@ a:hover
     color: white;
     background: grey;
 }
-
-
-// div
-// {
-//     background-image: url("flower1.JPG");
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     height: 100%;
-//     background-position: center;
-// }
