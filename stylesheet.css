@@ -1,4 +1,4 @@
-.title {
+.title, table {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -22,17 +22,18 @@
       width: 100vw;
       height: 100vh; } }
 
-#head_text, .playlist {
+#head_text, #song {
+  position: absolute;
   color: black;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; }
-  #head_text #song, .playlist #song {
-    font-weight: bold; }
 
 #head_text {
-  position: absolute;
   top: 20%;
   left: 20%;
   font-size: 4vw; }
+
+#song {
+  font-size: 2vw; }
 
 a:visited {
   color: #e8e8e8; }

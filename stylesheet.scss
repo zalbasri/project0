@@ -1,3 +1,5 @@
+$p_c:white;
+
 %centre
 {
     position: absolute;
@@ -11,7 +13,7 @@
 .title
 {
      @extend %centre;
-    color: white;
+    color: $p_c;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 7vw; // https://www.w3schools.com/howto/howto_css_responsive_text.asp
@@ -36,30 +38,33 @@
     }
 }
 
-
-#head_text, .playlist
+table
 {
-     color: black;
-     text-shadow:
-     -1px -1px 0 white,
-     1px -1px 0 white,
-     -1px 1px 0 white,
-     1px 1px 0 white; //https://stackoverflow.com/questions/11323813/how-to-outline-text-in-html-css
-     #song
-     {
-         font-weight: bold;
-     }
+    @extend %centre
 }
 
+#head_text, #song
+{
+    position: absolute;
+    color: black;
+    text-shadow:
+    -1px -1px 0 $p_c,
+    1px -1px 0 $p_c,
+    -1px 1px 0 $p_c,
+    1px 1px 0 $p_c; //https://stackoverflow.com/questions/11323813/how-to-outline-text-in-html-css
+}
 
 #head_text
 {
-    position: absolute;
     top: 20%;
     left: 20%;
     font-size: 4vw;
 }
 
+#song
+{
+    font-size: 2vw;
+}
 a:visited
 {
     color: #e8e8e8;
@@ -68,6 +73,6 @@ a:visited
 
 ::selection
 {
-    color: white;
+    color: $p_c;
     background: grey;
 }
